@@ -25,7 +25,8 @@ class Stack:
         
     def pop(self):
         ret = self.data.pop(len(self.data) - 1)
-        self.stack_pointer -= 1
+        if self.stack_pointer < 0:
+            self.stack_pointer -= 1
         return ret
         
     def check(self) -> bool: 
