@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 # This is an implementation of a stack in python using a class as a type
@@ -62,16 +62,11 @@ if __name__ == "__main__":
     try:
         s = Stack(64)
 
-        #print(s.check())
-
         #s.push(1234)
-        #s.push("dsfk")
-        #s.push(23)
-        #s.push(29834798449837249873297493)
-        #print(s.pop())
-        #print(s.check())
         #s.push("dsjf")
+        #s.pop()
         #s.print_stack()
+        #print(s.check())
 
         # dynamic testing
         os.system("clear")
