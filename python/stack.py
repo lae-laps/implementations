@@ -64,17 +64,16 @@ if __name__ == "__main__":
 
         #print(s.check())
 
-        s.push(1234)
-        s.push("dsfk")
-        s.push(23)
-        s.push(29834798449837249873297493)
+        #s.push(1234)
+        #s.push("dsfk")
+        #s.push(23)
+        #s.push(29834798449837249873297493)
         #print(s.pop())
         #print(s.check())
-        s.push("dsjf")
-        s.print_stack()
+        #s.push("dsjf")
+        #s.print_stack()
 
-        '''
-        dynamic testing
+        # dynamic testing
         os.system("clear")
         while True:
             s.print_stack()
@@ -84,7 +83,6 @@ if __name__ == "__main__":
             except:
                 pass
             os.system("clear")
-        '''
 
     except KeyboardInterrupt:
         print("exiting...")
