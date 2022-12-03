@@ -5,4 +5,3 @@ def digital_root(n):
             count += int(digit)
         n = count
     return n
-    
