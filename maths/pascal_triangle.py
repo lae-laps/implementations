@@ -13,6 +13,8 @@ if len(sys.argv) > 1:
 
 buffer = []
 
+# calculate the triangle up to rows max
+
 for i in range(rows):
     tmp = []
     for j in range(i + 1):
@@ -25,7 +27,7 @@ for i in range(rows):
 
 # display the triangle
 
-max_len = len(str(buffer[len(buffer) - 1][len(buffer) // 2]))   # maximum possible length
+max_len = len(str(buffer[len(buffer) - 1][len(buffer) // 2]))   # maximum possible length of number
 
 for i in range(len(buffer)):
     for j in range((rows - i) * max_len + 1):
