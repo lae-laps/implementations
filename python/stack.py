@@ -25,7 +25,7 @@ class Stack:
         
     def pop(self):
         ret = self.data.pop(len(self.data) - 1)
-        if self.stack_pointer < 0:
+        if self.stack_pointer > 0:
             self.stack_pointer -= 1
         return ret
         
@@ -75,7 +75,14 @@ if __name__ == "__main__":
             s.print_stack()
             exp = input(">> ")
             try:
-                exec(exp)
+                #exec(exp)  # This is just crazy
+                split = exp.split()
+                if len(split) > 2:
+                    continue
+                if split[0] == "push":
+                    s.push(int(split[1]))
+                elif split[0] == "pop":
+                    s.pop()
             except:
                 pass
             os.system("clear")
@@ -83,3 +90,4 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("exiting...")
         exit(0)
+
