@@ -29,6 +29,8 @@ for i in range(rows):
 
 max_len = len(str(buffer[len(buffer) - 1][len(buffer) // 2]))   # maximum possible length of number
 
+print()
+
 for i in range(len(buffer)):
     for j in range((rows - i) * max_len + 1):
         print(' ', end='')
@@ -43,5 +45,7 @@ for i in range(len(buffer)):
                 print(' ', end='')
 
     print()
+
+print()
 
 
