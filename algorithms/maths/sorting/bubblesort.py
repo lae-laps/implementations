@@ -23,7 +23,7 @@ def bubblesort_decreasing(buffer):
 
     # bubblesort in decreasing order
 
-    n = len(buffer)
+    n = len(buffer)                                                     # also precalculating this means we only have to calculate it once
 
     check = False
 
@@ -35,6 +35,12 @@ def bubblesort_decreasing(buffer):
         if not check:
             return buffer
     return buffer
+
+def bubblesort_single_loop(buffer):
+    n = len(buffer)
+
+    for i in range(n * n + ( -i - 2 ) * n + i + 1):
+        # continue here
 
 
 print(buffer)
