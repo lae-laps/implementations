@@ -28,7 +28,7 @@ def is_happy(n):
 
 # Iterate through the first 100 integers and see wether each one is happy
 
-for i in range(10000000):
+for i in range(10000):
     check, buffer = is_happy(i)
 
     if check:
