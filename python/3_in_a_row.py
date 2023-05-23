@@ -1,9 +1,10 @@
 # implementation of 3 in a row
 
 import os
+import sys
 
 class Game:
-    def __init__(self):
+    def __init__(self, n):
 
         self.display_grid_numbers = True
 
@@ -15,13 +16,23 @@ class Game:
         # 1 - X
         # 2 - O
 
+        self.board = []
+
+        print(n)
+
+        for i in range(n):
+            current = []
+            for j in range(n):
+                current.append(0)
+            self.board.append(current)
+
+        '''
         self.board = [
             [0, 0, 0],
             [0, 0, 0],
             [0, 0, 0],
         ]
 
-        '''
         self.board = [
             [0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0],
@@ -99,6 +110,7 @@ class Game:
             return "invalid"
 
     def display(self):
+
         os.system("clear")
 
         if self.display_grid_numbers:
@@ -112,8 +124,14 @@ class Game:
 
         counter = 1
         for row in self.board:
+
             if self.display_grid_numbers:
-                print(f" {counter} |", end='')
+
+                space = ''
+                for i in range(len(str(len(self.board))) - len(str(counter))):
+                    space += ' '
+
+                print(f" {counter} {space}|", end='')
                 counter += 1
             for element in row:
                 x = self.represent_element(element)
@@ -148,5 +166,14 @@ class Game:
                 turn = 1
 
 if __name__ == "__main__":
-    game = Game()
+   
+    n = 3
+
+    try:
+        n = int(sys.argv[1])
+    except:
+        pass
+
+    game = Game(n)
     game.user_interface()
+
