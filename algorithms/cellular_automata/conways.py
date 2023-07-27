@@ -11,7 +11,6 @@ class Game:
         self.y = y
         self.board = []
 
-        #self.initialize_top_row_board()
         self.initialize_random_board(percentage_live)
 
         self.time_delay = delay       # milliseconds
@@ -30,17 +29,6 @@ class Game:
                 else:
                     current.append(0)
             self.board.append(current)
-
-    def initialize_top_row_board(self):
-        a = []
-        for i in range(self.x):
-            if i % 2 == 0:
-                a.append(1)
-            else:
-                a.append(0)
-        b = [0] * self.x
-        for i in range(self.y - 12):
-            self.board.append(b)
 
     def update_frame(self):
         text = '\n'
@@ -99,11 +87,11 @@ class Game:
 
     def run(self):
         while True:
+            self.update_frame()
             os.system("clear")
             #print("\x1B[2J")
             self.display()
             self.next_cycle()
-            self.update_frame()
             time.sleep(self.time_delay / 1000)
 
 # main
